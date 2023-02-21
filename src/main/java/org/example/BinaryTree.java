@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class BinaryTree<E extends Integer> {
 
     int[] list = new int[4];
@@ -75,6 +77,21 @@ public class BinaryTree<E extends Integer> {
             }
         }
         return false;
+    }
+
+    public void listTreeAsSortedArray() {
+        int[] sortList = new int[list.length];
+
+        for (int i = 0; i < list.length; i++) {
+            sortList[i] = list[i];
+        }
+        Arrays.sort(sortList);
+
+        System.out.println();
+        for (int i = 0; i < sortList.length; i++) {
+            System.out.print(sortList[i] + "  ");
+        }
+
     }
 
 

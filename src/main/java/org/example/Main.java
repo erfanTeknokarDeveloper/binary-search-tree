@@ -31,6 +31,8 @@ public class Main {
         printer(binary.search(55));
 
 
+
+        binary.listTreeAsSortedArray();
     }
 
     public static void printer(boolean value){
