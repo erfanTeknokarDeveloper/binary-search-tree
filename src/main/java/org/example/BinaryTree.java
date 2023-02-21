@@ -15,19 +15,13 @@ public class BinaryTree<E extends Integer> {
         if (list.length <= sizeOfList) {
             list = addElement(list);
         }
-
-//        if (counter == 1) {
-//            list[counter] = value;
-//        }
         if (value == list[counter / 2]) {
             System.out.println("dont insert doble value");
         } else if (value > list[counter / 2]) {
             list[counter + 1] = value;
-//            list[ counter + 1] = value;
             sizeOfList++;
         } else if (value < list[counter / 2]) {
             list[counter] = value;
-//            list[counter] = value;
             sizeOfList++;
         } else {
             sizeOfList++;
@@ -39,7 +33,6 @@ public class BinaryTree<E extends Integer> {
 
 
     public boolean search(int value) {
-//        int halfOfSize = sizeOfList/2;
         int counter = 1;
         while (counter <= sizeOfList) {
             if (value == list[counter / 2]) {
@@ -51,10 +44,6 @@ public class BinaryTree<E extends Integer> {
                 if (value == list[counter + 1]) {
                     return true;
                 }
-//                else if (value > list[counter + 1]) {
-//                    counter++;
-//                    continue;
-//                }
                 counter++;
                 continue;
 
@@ -65,10 +54,6 @@ public class BinaryTree<E extends Integer> {
                     return true;
                 }
 
-//                else if (value < list[counter]) {
-//                    counter++;
-//                    continue;
-//                }
                 counter++;
                 continue;
             }
@@ -114,6 +99,5 @@ public class BinaryTree<E extends Integer> {
 
         return newArray;
     }
-
 
 }
